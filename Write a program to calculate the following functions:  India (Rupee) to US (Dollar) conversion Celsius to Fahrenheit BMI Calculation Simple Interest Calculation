@@ -1,0 +1,24 @@
+def inr_to_usd(amount):
+    conversion_rate = 0.014 # 1 INR = 0.014 USD
+    return amount * conversion_rate
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+def calculate_bmi(weight_kg, height_m):
+    return weight_kg / (height_m ** 2)
+def calculate_simple_interest(principal, rate, time):
+    return (principal * rate * time) / 100
+amount_inr = 1000
+usd_amount = inr_to_usd(amount_inr)
+print(f"{amount_inr} INR is equal to {usd_amount} USD")
+celsius_temp = 25
+fahrenheit_temp = celsius_to_fahrenheit(celsius_temp)
+print(f"{celsius_temp}°C is equal to {fahrenheit_temp}°F")
+weight = 70
+height = 1.75
+bmi = calculate_bmi(weight, height)
+print(f"The BMI is: {bmi}")
+principal_amount = 1000
+rate_of_interest = 5
+time_period = 2
+simple_interest = calculate_simple_interest(principal_amount, rate_of_interest, time_period)
+print(f"The Simple Interest is: {simple_interest}")
