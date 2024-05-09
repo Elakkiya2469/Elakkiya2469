@@ -1,0 +1,3 @@
+a = [45, 67, 83, 24, 55, 87, 77, 34]
+position = a.index(55)
+print("The position of 55 in the list is:", position)
