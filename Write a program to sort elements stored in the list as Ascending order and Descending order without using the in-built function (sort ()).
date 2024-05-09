@@ -1,0 +1,20 @@
+def sort_asc(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+def sort_desc(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] < arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+numbers = [5, 3, 7, 9, 8, 4, 2]
+ascending_sorted = sort_asc(numbers.copy())
+descending_sorted = sort_desc(numbers.copy())
+print("Original list:", numbers)
+print("Ascending order:", ascending_sorted)
+print("Descending order:", descending_sorted)
