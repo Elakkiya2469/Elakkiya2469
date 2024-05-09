@@ -1,0 +1,6 @@
+keys = ["Ten", "Twenty", "Thirty"]
+values = [10,20,30]
+print("Original key list is : " + str(keys))
+print("Original value list is : " + str(values))
+res = {keys[i]: values[i] for i in range(len(keys))}
+print("Resultant dictionary is : " + str(res))
