@@ -1,0 +1,23 @@
+import random
+class Voter:
+    def __init__(self, name):
+        self.name = name
+        self.vote = None
+class Candidate:
+    def __init__(self, name):
+        self.name = name
+        self.votes = 0
+voters = [Voter(f"Voter_{i}") for i in range(1, 11)]
+candidates = [Candidate("A"), Candidate("B"), Candidate("C")]
+for voter in voters:
+    voter.vote = random.choice(candidates)
+for voter in voters:
+    voter.vote.votes += 1
+candidates.sort(key=lambda x: x.votes, reverse=True)
+winner, runner_up = candidates[0], candidates[1]
+print("Winner:", winner.name, "with", winner.votes, "votes")
+print("Runner-up:", runner_up.name, "with", runner_up.votes, "votes")
+winner_voters = [voter.name for voter in voters if voter.vote == winner]
+runner_up_voters = [voter.name for voter in voters if voter.vote == runner_up]
+print("\nVoters who voted for the winner:", winner_voters)
+print("Voters who voted for the runner-up:", runner_up_voters)
